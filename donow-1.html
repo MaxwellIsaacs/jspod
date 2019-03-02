@@ -1,0 +1,28 @@
+<html>
+    <head>
+    	<style type="text/css">
+            #clicktoscreen{
+	            background-color: #FF0000;
+	            color: #0000FF;
+                width: 50px;
+            	height: 50px;
+            }
+        </style>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <input id="texttoscreen" type="text"/>
+        <button id="clicktoscreen">Click!</button>
+        <p id="textonscreen"></p>
+        <script>
+            $("button").click(()=>{
+           const screenoutput = $("input#texttoscreen").val();
+            $("p").append(screenoutput + "</br>");
+             })
+        </script>
+    </body>
+</html>
