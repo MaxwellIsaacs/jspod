@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <style type="text/css">
+      #clicktoscreen{
+        background-color: #FF0000;
+        color: #0000FF;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <input id="intone" type="number"/>
+    <p id="operation"></p>
+    <input id="inttwo" type="number"/>
+    <button id="Addition">Add
+    </button>
+    <button id="Subtraction">Subtract
+    </button>
+    <button id="Divide">Divide
+    </button>
+    <button id="Multiply">Multiply
+    </button>
+    <p id="result">
+    </p>
+    <script>
+      $("#Addition").click(()=>{
+        const screenoutput = parseInt($("input#intone").val());
+        const screenoutput1 = parseInt($("input#inttwo").val());
+        $("#result").html(screenoutput + screenoutput1);
+        $("#operation").html("+");
+      }
+                          );
+      $("#Subtraction").click(()=>{
+        const screenoutput = $("input#intone").val();
+        const screenoutput1 = $("input#inttwo").val();
+        $("#result").html(screenoutput - screenoutput1);
+        $("#operation").html("-");
+      }
+                             );
+      $("#Divide").click(()=>{
+        const screenoutput = $("input#intone").val();
+        const screenoutput1 = $("input#inttwo").val();
+        $("#result").html(screenoutput / screenoutput1);
+        $("#operation").html("/");
+      }
+                        );
+      $("#Multiply").click(()=>{
+        const screenoutput = $("input#intone").val();
+        const screenoutput1 = $("input#inttwo").val();
+        $("#result").html(screenoutput  * screenoutput1);
+        $("#operation").html("*");
+      }
+     );
+    </script>
+  </body>
+</html>
+
